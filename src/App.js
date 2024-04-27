@@ -14,24 +14,24 @@ function ExcelReader() {
   useEffect(() => {
     const fetchData1 = async () => {
       try {
-        const response = await fetch('/FrecuenciaVentas.csv');
+        const response = await fetch('/FrecuenciaVentasOverall.csv');
         const csvData = await response.text();
         const parsedData = parseCSV(csvData);
         setData1(parsedData);
         setFilteredData1(parsedData);
       } catch (error) {
-        console.error('Error fetching data from FrecuenciaVentas.csv:', error);
+        console.error('Error fetching data from FrecuenciaVentasOverall.csv:', error);
       }
     };
 
     const fetchData2 = async () => {
       try {
-        const response = await fetch('/LastPurchase.csv');
+        const response = await fetch('/LastTransactions2.csv');
         const csvData = await response.text();
         const parsedData = parseCSV(csvData);
         setData2(parsedData);
       } catch (error) {
-        console.error('Error fetching data from LastPurchase.csv:', error);
+        console.error('Error fetching data from LastTransactions2.csv:', error);
       }
     };
 
