@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Container for the entire Excel Reader */
+.excel-reader {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Filtering section */
+.filtering {
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.filter-input {
+  margin-right: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.per-page-select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #f40612;
+}
+
+/* Table container */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px; /* Adjust padding to fit more content */
+  text-align: left;
+  color: #333;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Cursor and hover styles for table rows */
+.table-container tr {
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.table-container tr:hover {
+  background-color: #f2f2f2; /* Highlight row on hover */
+}
+
+/* Filter modal */
+.filter-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 9999;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modal-title {
+  color: #fff;
 }
